@@ -1,0 +1,45 @@
+@function rem($px, $base: 16px) {
+    @return #{$px / $base}rem;
+}
+
+$breakpoint-xs: 576px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;
+$breakpoint-xl: 1400px;
+
+.wrapper{
+    width: 100%;
+    max-width: 1408px;
+    margin: 0 auto;
+}
+
+.icon{
+    display: table;
+}
+
+.svgsprite{
+    display: none;
+}
+
+section{
+    overflow: hidden;
+}
+
+@media (max-width: $breakpoint-xl) {
+    .wrapper{
+        padding: 0 rem(40px);
+    }
+}
+
+@media (max-width: $breakpoint-sm) {
+    .wrapper{
+        padding: 0 rem(30px);
+    }
+}
+
+@media (max-width: $breakpoint-xs) {
+    .wrapper{
+        padding: 0 rem(20px);
+    }
+}

@@ -1,0 +1,39 @@
+$page-colors: (
+    page: (
+        neutral-0: #fff,
+        neutral-1: #F8F8F8,
+        neutral-2: #F5F5F5,
+        neutral-3: #E0E0E0,
+        neutral-4: #C6C6C6,
+        neutral-5: #A4A4A4,
+        neutral-55: #7C7C7C,
+        neutral-6: #505050,
+        neutral-7: #383838,
+        neutral-8: #212121,
+        neutral-9: #000,
+        blue: #0383CB,
+        link: #1653A4,
+        link-hover: #00275B,
+        dark-blue: #1653A4,
+        light-blue: #C3E1FA,
+        green: #689700
+    )
+); 
+
+
+@function color($color, $variation:default) {
+    @if map-has-key($page-colors,$color) {
+
+        $color-hex: map-get($page-colors,$color);
+            @if map-has-key($color-hex,$variation) {
+                $variation: map-get($color-hex,$variation);
+                @return $variation;
+            }
+
+            @error 'Variation "#{$variation}" for color "#{$color}" is not defined. All available variations for this color - "#{map-get($page-colors,$color)}"';
+            @return null;
+    }
+
+    @error 'Color "#{$color}" is not defined. All available colors - "#{map-keys($page-colors)}"';
+    @return null;
+}

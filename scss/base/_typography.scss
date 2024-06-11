@@ -1,0 +1,92 @@
+@mixin font-style($size, $weight: 400, $line-height: 1.5) {
+  $rem-size: $size / 16;
+  font-size: $rem-size + rem; 
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.headline-1 {
+  @include font-style(50, 400, 1.3);
+  color: color(page, neutral-8);
+
+  strong{
+    font-weight: 700;
+  }
+}
+
+.headline-2 {
+  @include font-style(32, 700, 1.3);
+  color: color(page, neutral-8);
+}
+
+.headline-3 {
+  @include font-style(24, 700, 1.5);
+  color: color(page, neutral-0);
+}
+
+.headline-4 {
+  @include font-style(20, 700, 1.5);
+}
+
+.perex {
+  @include font-style(16, 400, 1.6);
+}
+
+.body-1 {
+  @include font-style(14, 400, 1.6);
+}
+
+.body-2 {
+  @include font-style(12, 400, 1.6);
+}
+
+.perex,
+.body-1,
+.body-2 {
+  strong{
+    font-weight: 700;
+  }
+}
+
+.perex--link,
+.body-1--link,
+.body-2--link {
+  color: color(page, link);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.perex--link:hover,
+.body-1--link:hover,
+.body-2--link:hover {
+  color: color(page, link-hover);
+}
+
+@media (max-width: $breakpoint-md) {
+  .headline-1 {
+    @include font-style(40, 400, 1.2);
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .headline-1 {
+    @include font-style(30, 400, 1.3);
+  }
+
+  .headline-2 {
+    @include font-style(26, 700, 1.3);
+  }
+
+  .headline-3 {
+    @include font-style(22, 700, 1.5);
+  }
+
+  .headline-4 {
+    @include font-style(18, 700, 1.5);
+  }
+}

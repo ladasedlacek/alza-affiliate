@@ -1,0 +1,11 @@
+.accordion{
+    .body-1.body-1--link{
+        color: color(page, neutral-5);
+        display: table;
+        margin: rem(30px) auto 0;
+
+        &:hover{
+            color: color(page, link-hover);
+        }
+    }
+}

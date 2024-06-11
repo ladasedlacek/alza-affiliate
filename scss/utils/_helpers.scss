@@ -1,0 +1,57 @@
+.bg-blue{
+    background: color(page, dark-blue);
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: rem(20px);
+}
+
+@media (max-width: $breakpoint-sm) {
+    .flex{
+        gap: rem(10px);
+    }
+}
+
+.z-index1{
+    position: relative;
+    z-index: 1;
+}
+
+.z-index2{
+    position: relative;
+    z-index: 2;
+}
+
+.z-index3{
+    position: relative;
+    z-index: 3;
+}
+
+.mb30{
+    margin-bottom: rem(30px);
+}
+
+.mb50{
+    margin-bottom: rem(50px);
+}
+
+.mb80{
+    margin-bottom: rem(80px);
+}
+
+.p50{
+    padding: rem(50px) 0;
+}
+
+.p80{
+    padding: rem(80px) 0;
+}
+
+.p100{
+    padding: rem(100px) 0;
+}

@@ -1,0 +1,79 @@
+.faqs{
+    &__box{
+        background: color(page, neutral-0);
+        border-radius: rem(4px);
+        text-align: left;
+        margin-bottom: rem(10px);
+        padding: 0 rem(16px);
+        cursor: pointer;
+        box-shadow: 0 rem(1px) rem(4px) rgba($color: color(page, neutral-6), $alpha: .15);
+        transition: .15s ease-in-out;
+        overflow: hidden;
+
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+
+        &:hover{
+            background-color: color(page, neutral-1);
+
+            .faqs__headline.body-1{
+                color: color(page, blue);
+            }
+        }
+
+        &--active{
+            background-color: color(page, neutral-1);
+
+            .faqs__headline.body-1{
+                color: color(page, blue);
+                font-weight: 500;
+
+                &::before{
+                    transform: translateY(-50%) rotate(180deg);
+                }
+            }
+
+            .faqs__paragraph{
+                padding-bottom: 12px;
+            }
+        }
+    }
+
+    &__headline.body-1{
+        color: color(page, neutral-8);
+        margin: 0;
+        position: relative;
+        outline: none;
+        padding: rem(12px) 0 rem(12px) rem(32px);
+        transition: .15s ease-in-out;
+        font-weight: 500;
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: rem(16px);
+            height: rem(9px);
+            background-image: url('data:image/svg+xml,<svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.306001 0.308018C0.208915 0.404735 0.13188 0.51967 0.0793164 0.646228C0.0267528 0.772787 -0.000305176 0.908478 -0.000305176 1.04552C-0.000305176 1.18256 0.0267528 1.31825 0.0793164 1.44481C0.13188 1.57137 0.208915 1.6863 0.306001 1.78302L7.231 8.70802C7.3081 8.78527 7.39967 8.84656 7.50048 8.88838C7.60129 8.9302 7.70936 8.95172 7.8185 8.95172C7.92764 8.95172 8.03571 8.9302 8.13652 8.88838C8.23733 8.84656 8.32891 8.78527 8.406 8.70802L15.331 1.78002C15.5247 1.58403 15.633 1.31934 15.6322 1.04377C15.6314 0.768196 15.5216 0.504138 15.3267 0.309278C15.1319 0.114417 14.8678 0.00459285 14.5922 0.00379473C14.3167 0.0029966 14.052 0.11129 13.856 0.305018L7.814 6.33802L1.772 0.299018C1.5761 0.106386 1.31188 -0.000812557 1.03714 0.000874098C0.762406 0.00256075 0.49952 0.112996 0.306001 0.308018V0.308018Z" fill="%231653A4"/></svg>');
+            left: 0;
+            top: rem(23px);
+            transition: .3s ease-in-out;
+            transform-origin: center;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__paragraph{
+        padding: 0 0 0 rem(32px);
+        height: 0;
+        transition: all .3s ease;
+
+        .body-1{
+            &:first-of-type{
+                margin-top: 0;
+            }
+
+            margin-top: rem(8px); 
+        }
+    }
+}

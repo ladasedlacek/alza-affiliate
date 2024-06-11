@@ -1,0 +1,33 @@
+.features{
+    &__box{
+        width: calc(100% / 5 - 1rem);
+        text-align: center;
+        padding: 12px 0;
+
+        .icon{
+            margin: 0 auto;
+        }
+
+        .perex{
+            color: color(page, light-blue);
+            margin-top: rem(20px);
+            padding: 0 rem(24px);
+        }
+    }
+}
+
+@media (max-width: $breakpoint-md) {
+    .features__box{
+        width: calc(100% / 3 - rem(14px));
+
+        .perex{
+            padding: 0 rem(10px);
+        }
+    }
+}
+
+@media (max-width: $breakpoint-xs) {
+    .features__box{
+        width: calc(100% / 2 - rem(5px));
+    }
+}

@@ -1,0 +1,63 @@
+.boxes{
+    &--benefits{
+        .boxes__box{
+            padding-right: rem(20px);
+
+            .headline-4{
+                margin-bottom: 24px;
+            }
+
+            .icon{
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    &--white{
+        .boxes__box{
+            background: color(page, neutral-0);
+            border-radius: 8px;
+            padding: rem(32px);
+        }
+    }
+
+    &__box{
+        width: calc(100% / 3 - 14px);
+        text-align: left;
+
+        .perex,
+        .body-1{
+            color: color(page, neutral-5);
+        }
+
+        .perex{
+            margin-bottom: rem(20px);
+        }
+    }
+}
+
+@media (max-width: $breakpoint-sm) {
+    .boxes{
+        &--white{
+            .boxes__box{
+                padding: rem(20px);
+            }
+        }
+
+        &__box{
+            width: calc(100% / 2 - rem(5px));
+        }
+    }
+}
+
+@media (max-width: $breakpoint-xs) {
+    .boxes{
+        &__box{
+            width: 100%;
+        }
+    }
+
+    .boxes.boxes--benefits.flex{
+        gap: rem(40px);
+    }
+}
