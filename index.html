@@ -14,13 +14,52 @@
 
 <body>
     <div id="landingpage">
-        <a href="#" class="button button--login"><p class="perex">Přihlášení</p></a>
-        <a href="#" class="button button--register button--blue"><p class="perex">Registrace</p></a>
+        <!-- navigation -->
+         <nav class="navigation">
+            <div class="wrapper flex">
+                <div class="navigation__logoWrapper">
+                    <svg class="icon" width="218" height="27">
+                        <use xlink:href="#affiliate"></use>
+                    </svg>
+                </div>
+
+                <!-- mobile menu -->
+                <input class="menu-button" type="checkbox" id="menu-button" />
+                <label class="menu-icon" for="menu-button"><span class="icon"></span></label>
+    
+                <!-- navigation links -->
+                <div class="navigation__itemsWrapper flex">
+                    <ul class="navigation__links flex">
+                        <li><a href="#landingpage" class="perex navigation__link">Úvod</a></li>
+                        <li><a href="#benefits" class="perex navigation__link">Proč vydělávat s Alza.cz</a></li>
+                        <li><a href="#reviews" class="perex navigation__link">Zkušenosti</a></li>
+                        <li><a href="#faqs" class="perex navigation__link">Časté dotazy</a></li>
+                    </ul>
+                    
+                    <!-- language selector -->
+                    <div class="navigation__langSelector flex" id="lang-selector">
+                        <p class="body-2 body-2--link navigation__currentLang navigation__currentLang--cz">CZ</p>
+                        <ul class="navigation__langMenu">
+                            <li><a href="#" class="navigation__lang body-1--link" data-code="sk">Slovenština</a></li>
+                            <li><a href="#" class="navigation__lang body-1--link" data-code="en">Angličtina</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- login / register -->
+                    <div class="navigation__user flex">
+                        <a href="#" class="button button--login"><p class="perex">Přihlášení</p></a>
+                        <a href="#" class="button button--register button--blue"><p class="perex">Registrace</p></a>
+                    </div>
+                </div>
+            </div>
+         </nav>
+
         <!-- header -->
          <header class="header">
             <div class="wrapper">
-                <div class="header__container flex z-index2">
-                    <div class="header__textWrapper">
+                <div class="blurred-circle blurred-circle--left blurred-circle--blue"></div>
+                <div class="header__container flex z-index2 animatable">
+                    <div class="header__textWrapper z-index3">
                         <h1 class="headline-1"><strong>Vydělávejte na&nbsp;internetu</strong><br>s affiliate programem Alza.cz</h1>
                         <ul class="items">
                             <li class="items__item perex">Spolupracujte s <strong>jedničkou na trhu </strong>v online nákupech</li>
@@ -31,6 +70,7 @@
                     </div>
 
                     <div class="header__imageWrapper">
+                        <div class="blurred-circle blurred-circle--right blurred-circle--green"></div>
                         <picture>
                             <source type="image/webp" srcset="./build/img/main-all.webp, ./build/img/main-all@2x.webp 2x" />
                             <source type="image/png" srcset="./build/img/main-all.png, ./build/img/main-all@2x.png 2x" />
@@ -42,9 +82,9 @@
          </header>
 
         <!-- usps -->
-        <section class="usps bg-blue p50">
+        <section class="usps bg-blue p50 z-index2">
             <div class="wrapper">
-                <div class="features flex">
+                <div class="features flex animatable">
                     <div class="features__box">
                         <svg class="icon" width="64" height="64">
                             <use xlink:href="#usp-1"></use>
@@ -84,10 +124,12 @@
         </section>
 
         <!-- benefits -->
-        <section class="benefits p100">
-            <div class="wrapper">
-                <h2 class="headline-2 mb80">Proč vydělávat peníze na&nbsp;internetu s&nbsp;Alza.cz?</h2>
-                <div class="boxes boxes--benefits flex">
+        <section class="benefits" id="benefits">
+            <div class="blurred-circle blurred-circle--left blurred-circle--blue"></div>
+            <div class="blurred-circle blurred-circle--right blurred-circle--green"></div>
+            <div class="wrapper z-index2">
+                <h2 class="headline-2 mb50">Proč vydělávat peníze na&nbsp;internetu s&nbsp;Alza.cz?</h2>
+                <div class="boxes boxes--benefits flex animatable">
                     <div class="boxes__box">
                         <svg class="icon" width="64" height="64">
                             <use xlink:href="#discount"></use>
@@ -116,10 +158,12 @@
         </section>
 
         <!-- process -->
-        <section class="process bg-blue p80">
+        <section class="process z-index3 bg-blue" id="process">
+            <div class="blurred-circle blurred-circle--left blurred-circle--green"></div>
+            <div class="blurred-circle blurred-circle--right blurred-circle--green"></div>
             <div class="wrapper z-index2">
                 <h3 class="headline-3 mb30">Stát se partnerem je&nbsp;jednoduché</h3>
-                <div class="boxes boxes--white flex">
+                <div class="boxes boxes--white flex animatable">
                     <div class="boxes__box">
                         <p class="perex">1. <strong>Zaregistrujte se</strong></p>
                         <p class="body-1"><a href="/Authentication/Register" class="body-1--link">Vytvořením svého účtu</a> získáte přístup <strong>do našeho Affiliate systému</strong> a&nbsp;také potřebné odkazy a bannery pro start vašich kampaní.</p>
@@ -137,7 +181,7 @@
                 </div>
 
                 <h3 class="headline-3 mb30">Jaké partnery do naší affiliate sítě hledáme?</h3>
-                <div class="features flex">
+                <div class="features flex animatable">
                     <div class="features__box">
                         <svg class="icon" width="64" height="64">
                             <use xlink:href="#benefit-1"></use>
@@ -177,25 +221,40 @@
             </div>
         </section>
 
-        <!-- faqs -->
-         <section class="accordion p50">
-            <div class="wrapper">
-                <h2 class="headline-2 mb50">Nejčastější dotazy a odpovědi</h2>
-                <div class="faqs">
-					<!-- bar -->
-					<div class="faqs__box">
-						<p class="faqs__headline body-1">Co je to affiliate?</p>
-						<div class="faqs__paragraph">
-							<p class="body-1">Alza Benefit je neveřejný věrnostní benefitní program nabízející svým členům výhodnější podmínky, speciální akce a soutěže při nákupu na alza.cz.</p>
-						</div>
-					</div>
-				</div>
-                <a href="#" class="body-1 body-1--link">Kompletní podmínky Affiliate programu</a>
-            </div>
-         </section>
+        <!-- reviews and accordion container -->
+        <div class="sections-container z-index1">
+            <div class="blurred-circle blurred-circle--left blurred-circle--blue"></div>
+            <div class="blurred-circle blurred-circle--right blurred-circle--green"></div>
+
+            <!-- reviews -->
+            <section class="reviews z-index2" id="reviews">
+                <div class="wrapper">
+                    
+                </div>
+            </section>
+
+            <!-- faqs -->
+            <section class="accordion z-index2" id="faqs">
+                <div class="wrapper">
+                    <h2 class="headline-2 mb50">Nejčastější dotazy a&nbsp;odpovědi</h2>
+                    <div class="faqs">
+                        <!-- bar -->
+                        <div class="faqs__box">
+                            <p class="faqs__headline body-1">Co je to affiliate?</p>
+                            <div class="faqs__paragraph">
+                                <p class="body-1">Alza Benefit je neveřejný věrnostní benefitní program nabízející svým členům výhodnější podmínky, speciální akce a soutěže při nákupu na alza.cz.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="body-1 body-1--link">Kompletní podmínky Affiliate programu</a>
+                </div>
+            </section>
+        </div>
 
         <!-- footer -->
-         <footer class="footer bg-blue p80">
+         <footer class="footer z-index3 bg-blue">
+            <div class="blurred-circle blurred-circle--left blurred-circle--green"></div>
+            <div class="blurred-circle blurred-circle--right blurred-circle--green"></div>
             <div class="wrapper">
                 <svg class="icon" width="218" height="27">
                     <use xlink:href="#affiliate-white"></use>

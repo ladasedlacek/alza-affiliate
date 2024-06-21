@@ -1,6 +1,24 @@
 .process{
     text-align: center;
 
+    .blurred-circle{
+        opacity: .2;
+        
+        &--left{
+            width: rem(864px);
+            left: 0;
+            top: -20%;
+            transform: translateX(-40%);
+        }
+
+        &--right{
+            width: rem(864px);
+            right: 0;
+            top: 60%;
+            transform: translateX(50%);
+        }
+    }
+
     .boxes{
         margin-bottom: rem(80px);
     }

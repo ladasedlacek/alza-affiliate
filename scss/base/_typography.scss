@@ -47,24 +47,22 @@ body{
 .perex,
 .body-1,
 .body-2 {
+  color: color(page, text);
+
+  &--link{
+    color: color(page, link);
+    text-decoration: underline;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+    &:hover{
+      color: color(page, link-hover);
+    }
+  }
+
   strong{
     font-weight: 700;
   }
-}
-
-.perex--link,
-.body-1--link,
-.body-2--link {
-  color: color(page, link);
-  text-decoration: underline;
-  cursor: pointer;
-  transition: .3s ease-in-out;
-}
-
-.perex--link:hover,
-.body-1--link:hover,
-.body-2--link:hover {
-  color: color(page, link-hover);
 }
 
 @media (max-width: $breakpoint-md) {

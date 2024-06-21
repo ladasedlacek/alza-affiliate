@@ -1,0 +1,53 @@
+$max-count: 10;
+@for $i from 1 through $max-count{
+    .animated > div:nth-child(#{$i}):not(.header__imageWrapper){
+        animation-delay: ($i - 1) * .25s;
+    }
+}
+
+.animatable{
+    opacity: 0;
+}
+
+.animated{
+    div{
+        opacity: 0;
+        transform: translateY(-30px);
+        animation: dropDown .7s forwards;
+    }
+}
+
+@keyframes dropDown{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes rollDown {
+    from{
+        opacity: 1;
+        max-height: 0;
+        visibility: hidden;
+    }
+
+    to{
+        opacity: 1;
+        max-height: rem(800px); 
+        visibility: visible;
+    }
+  }

@@ -1,0 +1,17 @@
+.benefits{
+    .blurred-circle{
+        &--left{
+            width: rem(704px);
+            left: 0;
+            top: -30%;
+        }
+
+        &--right{
+            width: rem(862px);
+            right: 0;
+            top: -40%;
+            transform: translateX(50%);
+            opacity: .7;
+        }
+    }
+}

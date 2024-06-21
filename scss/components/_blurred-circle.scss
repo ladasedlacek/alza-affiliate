@@ -1,0 +1,15 @@
+.blurred-circle{
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    filter: blur(rem(100px));
+    position: absolute;
+    z-index: 1;
+
+    &--green{
+        background-color: #F2FDE5;
+    }
+
+    &--blue{
+        background-color: #ECF5FE;
+    }
+}

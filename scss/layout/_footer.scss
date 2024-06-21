@@ -1,4 +1,22 @@
 .footer{
+    .blurred-circle{
+        opacity: .2;
+
+        &--left{
+            width: rem(862px);
+            left: 0;
+            top: 30%;
+            transform: translateX(-40%);
+        }
+
+        &--right{
+            width: rem(862px);
+            right: 0;
+            top: 60%;
+            transform: translateX(50%);
+        }
+    }
+
     .icon{
         margin: 0 auto;
         display: table;

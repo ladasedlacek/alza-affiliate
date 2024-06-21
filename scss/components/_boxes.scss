@@ -3,12 +3,9 @@
         .boxes__box{
             padding-right: rem(20px);
 
-            .headline-4{
-                margin-bottom: 24px;
-            }
-
+            .headline-4,
             .icon{
-                margin-bottom: 24px;
+                margin-bottom: rem(24px);
             }
         }
     }
@@ -25,11 +22,10 @@
         width: calc(100% / 3 - 14px);
         text-align: left;
 
-        .perex,
-        .body-1{
-            color: color(page, neutral-5);
+        .perex{
+            color: color(page, neutral-8);
         }
-
+        
         .perex{
             margin-bottom: rem(20px);
         }

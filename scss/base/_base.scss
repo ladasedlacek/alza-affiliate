@@ -8,6 +8,10 @@ $breakpoint-md: 992px;
 $breakpoint-lg: 1200px;
 $breakpoint-xl: 1400px;
 
+html {
+    scroll-behavior: smooth;
+}
+
 .wrapper{
     width: 100%;
     max-width: 1408px;
@@ -22,8 +26,38 @@ $breakpoint-xl: 1400px;
     display: none;
 }
 
-section{
+header,
+section,
+footer{
+    position: relative;
+}
+
+section,
+footer{
     overflow: hidden;
+    padding: rem(80px) 0;
+}
+
+.sections-container{
+    position: relative;
+    overflow: hidden;
+
+    .blurred-circle{
+        &--left{
+            width: rem(704px);
+            left: 0;
+            top: 10%;
+            transform: translateX(-20%);
+        }
+
+        &--right{
+            width: rem(862px);
+            right: 0;
+            top: -60%;
+            transform: translateX(50%);
+            opacity: .7;
+        }
+    }
 }
 
 @media (max-width: $breakpoint-xl) {
@@ -33,6 +67,11 @@ section{
 }
 
 @media (max-width: $breakpoint-sm) {
+    section,
+    footer{
+        padding: rem(50px) 0;
+    }
+
     .wrapper{
         padding: 0 rem(30px);
     }
