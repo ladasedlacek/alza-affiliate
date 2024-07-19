@@ -23,14 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     open_lang()
 
-    const active_lang = () => {
-        const active = document.querySelector('.langSelector__langBox--active')
-        active.addEventListener('click', event => {
-            event.preventDefault()
-            document.querySelector('.dialog--active').classList.toggle('dialog--active')
-        })
-    }
-
     const closeDialog = () => {
         const dialogs = document.querySelectorAll('.dialog')
         dialogs.forEach(dialog => {
