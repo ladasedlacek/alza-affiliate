@@ -47,8 +47,8 @@
         animation: rollDown .3s ease-in-out forwards;
 
         .navigation__links,
-        .navigation__langSelector,
-        .navigation__user{
+        .navigation__user,
+        .langSelector{
             opacity: 0;
             animation: fadeIn .3s .2s ease-in forwards;
         }

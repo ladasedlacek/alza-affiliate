@@ -17,11 +17,11 @@
         <!-- navigation -->
          <nav class="navigation">
             <div class="wrapper flex">
-                <div class="navigation__logoWrapper">
+                <a href="/" class="navigation__logoWrapper">
                     <svg class="icon" width="218" height="27">
                         <use xlink:href="#affiliate"></use>
                     </svg>
-                </div>
+                </a>
 
                 <!-- mobile menu -->
                 <input class="menu-button" type="checkbox" id="menu-button" />
@@ -37,18 +37,14 @@
                     </ul>
                     
                     <!-- language selector -->
-                    <div class="navigation__langSelector flex" id="lang-selector">
-                        <p class="body-2 body-2--link navigation__currentLang navigation__currentLang--cz">CZ</p>
-                        <ul class="navigation__langMenu">
-                            <li><a href="#" class="navigation__lang body-1--link" data-code="sk">Slovenština</a></li>
-                            <li><a href="#" class="navigation__lang body-1--link" data-code="en">Angličtina</a></li>
-                        </ul>
+                    <div class="langSelector flex" >
+                        <p class="body-2 body-2--link langSelector__currentLang langSelector__currentLang--cz">CZ</p>
                     </div>
 
                     <!-- login / register -->
                     <div class="navigation__user flex">
-                        <a href="#" class="button button--login"><p class="perex">Přihlášení</p></a>
-                        <a href="#" class="button button--register button--blue"><p class="perex">Registrace</p></a>
+                        <a href="#" class="button button--login"><p class="button__text">Přihlášení</p></a>
+                        <a href="#" class="button button--register button--blue"><p class="button__text">Registrace</p></a>
                     </div>
                 </div>
             </div>
@@ -66,7 +62,7 @@
                             <li class="items__item perex"><strong>Získejte provizi až 7&nbsp;%</strong> podle typu zboží</li>
                             <li class="items__item perex">Partner může být každý - obsahové weby, portály, katalogy, fóra, YouTubeři</li>
                         </ul>
-                        <a href="#" class="button button--register button--blue"><p class="perex">Chci se stát partnerem</p></a>
+                        <a href="#" class="button button--register button--blue"><p class="button__text">Chci se stát partnerem</p></a>
                     </div>
 
                     <div class="header__imageWrapper">
@@ -217,7 +213,7 @@
                         <p class="perex">Weby zaměřené na hraní počítačových her</p>
                     </div>
                 </div>
-                <a href="#" class="button button--white button--register"><p class="perex">Chci se stát partnerem</p></a>
+                <a href="#" class="button button--white button--register"><p class="button__text">Chci se stát partnerem</p></a>
             </div>
         </section>
 
@@ -229,7 +225,76 @@
             <!-- reviews -->
             <section class="reviews z-index2" id="reviews">
                 <div class="wrapper">
-                    
+                    <h2 class="headline-2">Zkušenosti našich affiliate partnerů</h2>
+
+                    <div class="numbers flex animatable">
+                        <div class="number">
+                            <h2 class="headline-2" data-target="2500">0+</h2>
+                            <p class="body-1">partnerů</p>
+                          </div>
+                          
+                          <div class="number">
+                            <h2 class="headline-2" data-target="1000000">0+</h2>
+                            <p class="body-1">vytvořených objednávek</p>
+                          </div>
+                          
+                          <div class="number">
+                            <h2 class="headline-2" data-target="100000000">0+ Kč</h2>
+                            <p class="body-1">vyplacených na provizích</p>
+                          </div>
+                    </div>
+
+                    <div class="boxes boxes--reviews boxes--white flex animatable">
+                        <div class="boxes__box boxes__box--reviews flex">
+                            <div class="boxes__company flex">
+                                <img src="build/img/logos/cena-vykon.webp" srcset="build/img/logos/cena-vykon.webp, build/img/logos/cena-vykon@2x.webp 2x" alt="cena-vykon.cz" loading="lazy" width="135" height="30" class="reviews__logo">
+                                <p class="body-1">cena-vykon.cz</p>
+                                <p class="body-2">Internetový magazín</p>
+                                <svg class="icon icon--rating" width="108" height="20">
+                                    <use xlink:href="#rating"></use>
+                                </svg>
+                            </div>
+                            <div class="boxes__review">
+                                <p class="body-1">Oblíbený web Cena-Vykon.cz doporučuje svým čtenářům ty nejzajímavější produkty na trhu s přímým napojením na náš Affiliate.</p>
+                            </div>
+                        </div>
+
+                        <div class="boxes__box boxes__box--reviews flex">
+                            <div class="boxes__company flex">
+                                <img src="build/img/logos/pricemania.webp" srcset="build/img/logos/pricemania.webp, build/img/logos/pricemania@2x.webp 2x" alt="pricemania.sk" loading="lazy" width="135" height="30" class="reviews__logo">
+                                <p class="body-1">Pricemania.sk</p>
+                                <p class="body-2">Slovenský srovnávač cen</p>
+                                <svg class="icon icon--rating" width="108" height="20">
+                                    <use xlink:href="#rating"></use>
+                                </svg>
+                            </div>
+                            <div class="boxes__review">
+                                <p class="body-1">Naším Affiliate systémem procesujeme tisíce objednávek denně ze známého slovenského srovnávače cen. Nyní již i z jeho české verze.</p>
+                            </div>
+                        </div>
+
+                        <div class="boxes__box boxes__box--reviews flex">
+                            <div class="boxes__company flex">
+                                <img src="build/img/logos/mlada-fronta.webp" srcset="build/img/logos/mlada-fronta.webp, build/img/logos/mlada-fronta@2x.webp 2x" alt="Mladá fronta" loading="lazy" width="100" height="52" class="reviews__logo">
+                                <p class="body-1">Mladá fronta</p>
+                                <p class="body-2">Vydavatelství</p>
+                                <svg class="icon icon--rating" width="108" height="20">
+                                    <use xlink:href="#rating"></use>
+                                </svg>
+                            </div>
+                            <div class="boxes__review">
+                                <p class="body-1">Mladá Fronta patří mezi největší a nejúspěšnější vydavatelské domy v České republice. Spolupracujeme na digitálních projektech.</p>
+                            </div>
+                        </div>
+
+                        <div class="boxes__box boxes__box--reviews">
+                            <div class="boxes__partner flex">
+                                <p class="perex">Zde můžete být i vy</p>
+                                <p class="body-1">Máte osobní web nebo fungující business?<br><strong>Pojďte do toho s námi!</strong></p>
+                                <a href="#" class="button button--register button--blue"><p class="button__text">Chci se stát partnerem</p></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -242,11 +307,96 @@
                         <div class="faqs__box">
                             <p class="faqs__headline body-1">Co je to affiliate?</p>
                             <div class="faqs__paragraph">
-                                <p class="body-1">Alza Benefit je neveřejný věrnostní benefitní program nabízející svým členům výhodnější podmínky, speciální akce a soutěže při nákupu na alza.cz.</p>
+                                <p class="body-1">Affiliate je provizní systém. Je to náš způsob, jak vyplácíme partnerům provize za zakázky, které nám pomáhají realizovat. Pokud máte vlastní platformu, kterou oslovujete vaše návštěvníky, affiliate vám pomůže ji zhodnotit. Od typických po unikátní, affiliate sdružuje weby všeho druhu. Každá stránka se svým vlastním publikem může být využívaná pro promoční účely.</p>
+                                <p class="body-1">Dokážeme tak najít společnou řeč s bloggery, cenovými srovnávači, youtube kanály, expertními weby a mnohými dalšími Proč se do systému zapojit? Můžete třeba chtít mít za partnera nejsilnějšího hráče na trhu českého online trhu. Nebo vám stačí získat příjem z vašeho webu. Tak jako tak, věřím, že dokážeme navázat vzájemně výhodné partnerství.</p>
+                                <p class="body-1">Chcete se o našem systému dozvědět více? V tom případě jste na tom správném místě. Další informace najdete v našem <a href="/jak-funguje-affiliate-v-alze" class="body-1--link">informačním článku</a>.</p>
+                            </div>
+                        </div>
+
+                        <!-- bar -->
+                        <div class="faqs__box">
+                            <p class="faqs__headline body-1">Jak se do affiliate systému můžu zapojit?</p>
+                            <div class="faqs__paragraph">
+                                <p class="body-1">Při registraci do affiliate systému dostanete své vlastní identifikační číslo. Tomu ve zkratce říkáme IDP. Vaše IDP pak můžete vložit do URL odkazů, které povedou na náš e-shop. Každý nákup, který se uskuteční skrze tento odkaz, připíše partnerovi provizi, podle hodnoty nákupu a segmentu zboží. IDP se přidává jako UTM parametr, tedy až po konci běžné URL a uvozený znakem ? (nebo znakem &, pokud se nejedná o první UTM parametr). Váš měřený odkaz tak může vypadat třeba takhle: <a href="/produkt.htm?IDP=1234" class="body-1--link">https://www.alza.cz/produkt.htm?IDP=1234</a>. Trackovací parametr se dá zapojit více kreativními způsoby, jako například sdíleným <a href="/sdileni-nakupniho-kosiku-pro-pouziti-v-affiliate-systemu" class="body-1--link">nákupním seznamem</a>.</p>
+                                <p class="body-1">Úspěšnost vašich odkazů pro tvorbu konverzí můžete sledovat v affiliate rozhraní, v patře Bannery a Odkazy. Kdy se vám provize propíše do systému? Naše databáze se synchronizují jednou za den s databází hlavní. V online rozhraní tak uvidíte provize se zpožděním jednoho dne. To znamená, že provizi dostanete další den poté, co zákazník objednávku zaplatí. Pokud se jedná o platbu proformou, může to trvat až dva týdny. Sepsali jsme pro vás seznam našich <a href="/nejlepsi-praktiky-v-affiliate-systemu" class="body-1--link">best practices</a>, kde se můžete dozvědět více.</p>
+                            </div>
+                        </div>
+
+                        <!-- bar -->
+                        <div class="faqs__box">
+                            <p class="faqs__headline body-1">Dostanu provizi jen ze zboží, na které odkazuji?</p>
+                            <div class="faqs__paragraph">
+                                <p class="body-1">Ne! Můžete odkazovat na libovolné zboží. Dokonce nemusíte odkazovat na zboží vůbec, ale třeba jen na naši hlavní stránku, nebo kategorii. Provizi dostanete za nákup jakéhokoliv zboží, dokud je platná vaše cookie. Navíc je jedno, na jaké doméně se nákup stane. Jedna registrace platí pro všechny státy EU. Provize z ostatních států jsou automaticky přepočítávány do měny domény, ve které jste registrovaní. Konkrétní objednávky jsou v měnách, ve kterých byly provedeny (Euro, Libra)</p>
+                            </div>
+                        </div>
+
+                        <!-- bar -->
+                        <div class="faqs__box">
+                            <p class="faqs__headline body-1">Jak dostanu peníze, které mi affiliate systém vydělal?</p>
+                            <div class="faqs__paragraph">
+                                <p class="body-1">Pro vyplacení provize musíte dosáhnout minimální částky 500 Kč (nebo ekvivalent v jiné měně). Následně můžete do našeho online rozhraní fakturu nahrát a předat ji ke schválení. Tlačítko na nahrání faktury najdete v patře Přehled provizí. aktura musí obsahovat identifikační informace obou stran. Příjemce faktury je vždy Alza.cz, fakturační údaje najdete <a href="/zakladni-informace" class="body-1--link">zde</a>.</p>
+                                <p class="body-1">Faktury s jiným příjemcem nemůžeme proplatit. Fakturační informace dodavatele (vás) musí obsahovat všechny potřebné informace pro vaši identifikaci, případně další informace, jako jsou přenesené daňové povinnosti. Fakturaci bereme vážně. Dáváme si záležet, abychom faktury proplatili před jejich splatností – tj. do 30 dní po předání faktury. Pokud bude s fakturou nějaký problém, budeme vás přímo kontaktovat, ve snaze záležitost co nejrychleji vyřešit. Pro co nejpřímočařejší a nejrychlejší fakturaci si prosím zkontrolujte, zda vaše faktura obsahuje všechny důležité informace.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- bar -->
+                        <div class="faqs__box">
+                            <p class="faqs__headline body-1">Jak vložím banner do stránky?</p>
+                            <div class="faqs__paragraph">
+                                <p class="body-1">Vygenerovaný kód jednoduše zkopírujete do stávajícího kódu na místo, kde banner chcete zobrazovat. O zbytek se již postarají naše servery. Pro Wordpress a další známé CMS systémy existuje množství bannerových pluginů. Poraďte se se svým správcem webu, bude vědět kam. Důležité je aby měl odkaz IDP parametr. Bez něj jsme bezradní a nedokážeme spojit zakázky s vaším účtem.</p>
+                            </div>
+                        </div>
+
+                        <!-- bar -->
+                        <div class="faqs__box">
+                            <p class="faqs__headline body-1">Musím mít IČO pro spolupráci?</p>
+                            <div class="faqs__paragraph">
+                                <p class="body-1">Ano, k vystavování dokladů je třeba mít živnostenský list. Protože se ale daňové zákony často mění, doporučujeme se informovat ke konkrétnímu datu. Informaci vám poskytnou pracovníci úřadu i po telefonu nebo jsou dohledatelné na oficiální webové prezentaci <a href="https://www.financnisprava.cz/" class="body-1--link">Ministerstva Financí ČR</a>.</p>
+                            </div>
+                        </div>
+
+                        <!-- bar -->
+                        <div class="faqs__box">
+                            <p class="faqs__headline body-1">Objednávky se správně nezapočítávají?</p>
+                            <div class="faqs__paragraph">
+                                <p class="body-1">Vyčkejte několik dní, pokud máte jistotu, že objednávka proběhla korektně a z vašeho partnerského odkazu, <a href="mailto:affiliate@alza.cz" class="body-1--link">kontaktujte nás</a>.</p>
+                            </div>
+                        </div>
+
+                        <!-- bar -->
+                        <div class="faqs__box">
+                            <p class="faqs__headline body-1">Provize nesouhlasí s výší faktur?</p>
+                            <div class="faqs__paragraph">
+                                <p class="body-1">Provize jsou vypočítávány z částek bez DPH. Za neplátce daně odvádí DPH společnost Alza.cz a.s., plátci daně si daň započítávají k fakturaci provize. Do provizí také nezapočítáváme cenu dopravy – tu hradíme přepravním společnostem.</p>
+                            </div>
+                        </div>
+
+                        <!-- bar -->
+                        <div class="faqs__box">
+                            <p class="faqs__headline body-1">Provize nesouhlasí s výší faktur?</p>
+                            <div class="faqs__paragraph">
+                                <p class="body-1">Všechny důležité informace o chování v affiliate systému najdete v našich <a href="/vseobecne-obchodni-podminky-pro-program-affiliate-alzacz-art10624.htm" class="body-1--link">VOP</a>. Body, které je důležité neminout jsou:</p>
+                                <p class="body-1">2.1.12., nebo takzvaný „nákup na sebe“ je způsob využívání affiliate programu pro zakupování zboží se slevou, která je vyplacena ve formě faktury. Partner tak nesmí nakupovat zboží sám pro sebe, či pro svou rodinu, nebo firmu.</p>
+                                <p class="body-1">3.5. se týká bidování do online aukcí. Partneři nesmí inzerovat na klíčová slova chráněná ochranou známkou Alza.cz. Zároveň také nesmí cílit na stránky e-shopů společnosti Alza.cz a to na veškeré domény. Reklama, kterou si partneři zařizují na jejich vlastní webové stránky, je v pořádku, pokud přímo neporušuje bod 3.5.</p>
+                            </div>
+                        </div>
+
+                        <!-- bar -->
+                        <div class="faqs__box">
+                            <p class="faqs__headline body-1">Nepřišla mi výplata provize</p>
+                            <div class="faqs__paragraph">
+                                <p class="body-1">Peníze vždy zasíláme na účet uvedený na faktuře, zkontrolujte nejprve že na faktuře je vše v pořádku a uplynulo již více než 15 dní od schválení provize. Pokud jsou tyto podmínky splněny, <a href="mailto:affiliate@alza.cz" class="body-1--link">kontaktujte nás</a>.</p>
+                            </div>
+                        </div>
+
+                        <!-- bar -->
+                        <div class="faqs__box">
+                            <p class="faqs__headline body-1">Affiliate na Twitch kanálu</p>
+                            <div class="faqs__paragraph">
+                                <p class="body-1">Máte Twitch kanál, který chcete zhodnotit pomocí affiliate systému? Skvělé! Všechny důležité informace najdete v <a href="/jak-pouzivat-affiliate-na-twitchi" class="body-1--link">tomto článku</a>.</p>
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="body-1 body-1--link">Kompletní podmínky Affiliate programu</a>
                 </div>
             </section>
         </div>
@@ -256,11 +406,234 @@
             <div class="blurred-circle blurred-circle--left blurred-circle--green"></div>
             <div class="blurred-circle blurred-circle--right blurred-circle--green"></div>
             <div class="wrapper">
-                <svg class="icon" width="218" height="27">
+                <svg class="icon icon--affill" width="218" height="27">
                     <use xlink:href="#affiliate-white"></use>
                 </svg>
+
+                <div class="footer__container flex">
+                    <div class="footer__navigation flex">
+                        <div class="footer__navigationLeft">
+                            <a href="/" class="body-1 body-1--link">Úvod</a>
+                            <a href="#benefits" class="body-1 body-1--link">Proč vydělávat</a>
+                            <a href="#reviews" class="body-1 body-1--link">Zkušenosti</a>
+                            <a href="#faqs" class="body-1 body-1--link">Časté dotazy</a>
+                        </div>
+
+                        <div class="footer__navigationRight">
+                            <a href="mailto:affiliate@alza.cz:" class="body-1 body-1--link body-1--mail">affiliate@alza.cz</a>
+                            <a href="#" class="body-1 body-1--link open-terms">Kompletní podmínky programu</a>
+                        </div>
+                    </div>
+
+                    <div class="footer__media flex">
+                        <div class="footer__mediaLeft">
+                            <p class="body-1">Sledujte nás</p>
+                            <div class="footer__socialWrapper flex">
+                                <a href="#" class="footer__socialButton">
+                                    <svg class="icon icon--youtube" width="20" height="20">
+                                        <use xlink:href="#youtube"></use>
+                                    </svg>
+                                </a>
+                                <a href="https://www.facebook.com/alza.cz" class="footer__socialButton">
+                                    <svg class="icon icon--facebook" width="20" height="20">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                                <a href="https://www.instagram.com/alza_czsk" class="footer__socialButton">
+                                    <svg class="icon icon--instagram" width="20" height="20">
+                                        <use xlink:href="#instagram"></use>
+                                    </svg>
+                                </a>
+                                <a href="https://x.com/Alzacz" class="footer__socialButton">
+                                    <svg class="icon icon--twitter" width="20" height="20">
+                                        <use xlink:href="#x"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="footer__mediaRight">
+                            <p class="body-1">Jazyk webu (website language)</p>
+                            <div class="langSelector flex">
+                                <p class="body-2 body-2--link langSelector__currentLang langSelector__currentLang--white langSelector__currentLang--cz">CZ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alza">
+                    <svg class="icon" width="134" height="37">
+                        <use xlink:href="#alza.cz"></use>
+                    </svg>
+                    <p class="body-1">© 1994 - 2024 Alza.cz a.s.</p>
+                </div>
             </div>
          </footer>
+
+         <!-- dialog - lang -->
+          <div class="dialog dialog--languages">
+            <div class="dialog__body">
+                <div class="dialog__close"></div>
+                <div class="dialog__content">
+                    <h3 class="headline-3">Jazyk / Language</h3>
+                    <div class="langSelector">
+                        <a href="#" class="langSelector__langBox langSelector__langBox--active flex">
+                            <div class="langSelector__checkBox"></div>
+                            <p class="langSelector__currentLang langSelector__currentLang--cz">Čeština</p>
+                        </a>
+
+                        <a href="#" class="langSelector__langBox flex">
+                            <div class="langSelector__checkBox"></div>
+                            <p class="langSelector__currentLang langSelector__currentLang--sk">Slovenština</p>
+                        </a>
+
+                        <a href="#" class="langSelector__langBox flex">
+                            <div class="langSelector__checkBox"></div>
+                            <p class="langSelector__currentLang langSelector__currentLang--hu">Maďarština</p>
+                        </a>
+
+                        <a href="#" class="langSelector__langBox flex">
+                            <div class="langSelector__checkBox"></div>
+                            <p class="langSelector__currentLang langSelector__currentLang--de">Němčina</p>
+                        </a>
+
+                        <a href="#" class="langSelector__langBox flex">
+                            <div class="langSelector__checkBox"></div>
+                            <p class="langSelector__currentLang langSelector__currentLang--en">Angličtina</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+         <!-- dialog - terms -->
+        <div class="dialog dialog--terms">
+            <div class="dialog__body">
+                <div class="dialog__close"></div>
+                <div class="dialog__content">
+                    <h3 class="headline-3">Všeobecné obchodní podmínky pro program affiliate zavedený společností Alza.cz</h3>
+                    <h4 class="headline-4">1. ÚVODNÍ USTANOVENÍ</h4>
+                    <ol>
+                        <li class="body-1">Tyto všeobecné obchodní podmínky (dále jen „VOP“) vydává společnost Alza.cz a.s., IČO: 27082440, DIČ: CZ27082440, se sídlem Praha 7, Jankovcova 1522/53, PSČ 170 00, zapsaná v obchodním rejstříku vedeném Městským soudem v Praze, oddíl B, vložka 8573 (dále jen „Alza.cz“) pro své obchodní partnery, podnikatele, kteří se zaváží dodržovat tyto podmínky spolupráce, pokud provedou registraci na portálu Alza.cz v programu Affiliate, tedy program směřující k propagaci nakupování na portálech provozovaných společností Alza.cz na portálech třetích stran (dále jen „Program“), splní podmínky v těchto VOP a Alza.cz jejich registraci do Programu přijme (dále jen „Partner“), neboť Alza.cz má výhradní právo rozhodnout zdali a kdo může participovat na Programu.</li>
+                        <li class="body-1">Na základě potvrzení účasti v Programu ze strany Alza.cz, které není Alza.cz povinna provést, uzavírají Alza.cz a Partner smlouvou o obchodní spolupráci v Programu ve smyslu ust. § 1746 odst. 2 zákona č. 89/2012 Sb., občanský zákoník v platném znění, na základě níž je Partner povinen umístit na jím provozované portály (dále jen „Portál“) bannery  a odkazy s reklamou na internetový obchod Alza.cz (dále jen „Banner“), za což se v případě řádné činnosti Partnera na základě těchto VOP a v souladu s příslušnými právními předpisy zavazuje vyplatit provizi.</li>
+                        <li class="body-1">Smluvní strany prohlašují, že se jedná o dva samostatné subjekty, které vůči sobě nejsou ve vztahu podřízenosti a nadřízenosti a uzavírají tuto Smlouvu na vlastní riziko, přičemž každá strana přebírá riziko změny okolností.</li>
+                    </ol>
+
+                    <h4 class="headline-4">2. PROHLÁŠENÍ PARTNERA</h4>
+                    <ol>
+                        <li class="body-1">Partner prohlašuje, zaručuje se a zavazuje se společnosti Alza.cz, že po celou dobu trvání v Programu:
+                            <ol>
+                                <li class="body-1">je buď podnikatelem s platným živnostenským oprávněním, kterému bylo přiděleno IČO, anebo nepodnikatelem, který se Programu účastní pouze v rámci příležitostné činnosti ve smyslu zákona č. 586/1992 Sb., o daních z příjmů, přičemž úhrn příjmů z této činnosti nepřesáhne v kalendářním roce částku ve výši 30.000,- Kč;</li>
+                                <li class="body-1">veškerá prohlášení učiněná Partnerem vůči Alza.cz v rámci jednání o účasti v Programu a během samotného Programu jsou pravdivá, přesná a úplná, přičemž neexistuje žádná skutečnost, která by byla s těmito prohlášeními v rozporu;</li>
+                                <li class="body-1">je oprávněn uzavřít smlouvu ve smyslu těchto VOP, plnit své povinnosti z nich vyplývající a současně si je plně vědom povinností z těchto VOP vyplývajících;</li>
+                                <li class="body-1">veškeré předpoklady pro uzavření smlouvy ve smyslu těchto VOP jsou splněny, zejména nikoliv však výlučně s ohledem na pravdivost a úplnost prohlášení a ostatní podmínky stanovené příslušnými obecně závaznými právními předpisy;</li>
+                                <li class="body-1">uzavření smlouvy ve smyslu těchto VOP ani realizace jednotlivých kroků Partnera na základě a v souvislosti s ní není porušením jakékoliv povinnosti Partnera vyplývající z příslušných právních předpisů, závazných smluv, dohod a prohlášení, ani není v rozporu s jakýmkoliv požadavkem, rozhodnutím nebo předběžným opatřením správního orgánu, soudu, rozhodčího nálezu, kterými by byl Partner vázán, ani není porušením jakýchkoliv práv třetích osob;</li>
+                                <li class="body-1">není v úpadku ani hrozícím úpadku, ani proti němu nebyl podán insolvenční návrh a/nebo návrh na výkon rozhodnutí;</li>
+                                <li class="body-1">Portál má podobu dokončené webové stránky, tzn. mezi charakteristiky patří ucelený vzhled a funkčnost jednotlivých prvků této webové stránky;</li>
+                                <li class="body-1">Portál nemá cashbackový charakter a neumožňuje návštěvníkům získat část investovaných prostředků do pořízení sortimentu z Alza.cz zpět;</li>
+                                <li class="body-1">Portál, který má kupónový či slevový charakter má výpočet provize odlišný od obsahových portálů;</li>
+                                <li class="body-1">Provize "slevových portálů" od 1.4.2017 je 0,5 %.</li>
+                                <li class="body-1">Portál není tzv. MFA portál (tj. nejedná se o stránky vytvořené pouze za účelem zobrazování reklamy).</li>
+                                <li class="body-1">Portál obsahuje a bude obsahovat po dobu trvání spolupráce stran na základě této smlouvy a VOP Banner, který bude používán v rámci Programu, jakékoliv jiné využívání Portálu v rámci Programu, kdy koncový zákazník Alza.cz aktivně neklikne na příslušný Banner, je zakázané a nezakládá tak nárok na provizi specifikovanou níže;</li>
+                                <li class="body-1">Portál není využíván pro získání slev a jiných výhod přímo pro Partnera a/nebo osob Partnerovi blízkých (viz § 22 občanského zákoníku) od společnosti Alza.cz v případě samostatných transakcí Partnera na internetovém obchodu provozovaném společností Alza.cz (Partnerem dle tohoto bodu se rozumí Partner v jakékoliv formě, tj. jako podnikatel i nepodnikatel, dále i právnická osoba, se kterou je Partner majetkově propojen nebo ve které je majetkově účasten, jakož i právnická osoba, za kterou je Partner oprávněn právně jednat),</li>
+                                <li class="body-1">Portál neobsahuje žádné informace, odkazy, materiál a obsah, který by byl ve vztahu k třetím stranám včetně Alza.cz nekalosoutěžní, porušoval příslušné obecně závazné právní předpisy a nejvyšší etické standardy, mj. obsah tam uvedený a/nebo odkazovaný nenavádí a ani nemůže navádět k porušování obecně závazných právních předpisů a/nebo nemůže budit dojem, že s jejich porušováním souhlasí.</li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <p class="body-1">Závěrem Partner prohlašuje, že nebyl již dříve z programu vyloučen.</p>
+
+                    <h4 class="headline-4">3. VZÁJEMNÁ PRÁVA A POVINNOSTI</h4>
+                    <ol>
+                        <li class="body-1">Umístění odkazu či banneru Partnerem podléhá namátkové kontrole Alza.cz.</li>
+                        <li class="body-1">Partner není oprávněn umístit HTML kód Programu bez schválení Alza.cz. Partner je povinen Alza.cz oznámit URL adresu každé webové stránky, na které hodlá propagovat Alza.cz či svůj affiliate link v rámci Programu. Alza.cz následně rozhodne o souladu dané webové stránky se zájmy Alza.cz a zašle Partnerovi rozhodnutí emailem.</li>
+                        <li class="body-1">Partner není oprávněn získávat Provizi v rámci Programu za použití automaticky otevíraných oken, reklam a odkazů či framingu bez akce návštěvníka webu jednoznačně směřující ke kliknutí na affiliate odkaz. Partner nesmí kliknutím na odkaz jakkoliv podmiňovat další používání webových stránek či poskytnutí služeb. Kliknutí na odkaz musí být svobodným rozhodnutím návštěvníka stránek.</li>
+                        <li class="body-1">Alza.cz je oprávněna používat jméno a příjmení nebo název Partnera a jeho logo v marketingové komunikaci, v seznamech partnerů, kupujících i v prezentacích. Partner tak uděluje Alza.cz nevýhradní licenci bez územního či množstevního omezení, způsoby vymezenými výše, omezenou po dobu trvání smluvního vztahu, který Alza.cz není povinná využít. Partner je povinen Alza.cz zajistit nerušený výkon práv vyplývajících z poskytnuté licence a bez zbytečného odkladu i bez výzvy učinit veškeré právní kroky k odstranění omezení ve výkonu těchto práv.</li>
+                        <li class="body-1">Partner není oprávněn bidovat či jinak inzerovat v reklamních systémech na výrazy obsahující Alza.cz a Alza a překlepová slova (alya). Dále je zakázána reklama v reklamních systémech Google Ads, Seznam Sklik, Facebook Business Manager a v dalších reklamních systémech s odkazováním a/nebo přesměrováním na webové stránky obsahující výraz Alza (například Alza.cz, alza.cz, Alza.hu, Alza.at, Alza.de, Alzashop.com apod.).</li>
+                        <li class="body-1">Partner není oprávněn využívat rozesílání nevyžádané pošty (spam) ani jinou nedovolenou formu propagace porušující zásady poctivého obchodního styku a dobré mravy.</li>
+                        <li class="body-1">Partner není oprávněn při rozesílání reklamních emailů vystupovat jménem společnosti Alza.cz či nesmí vzbudit dojem, že je autorizovaný reklamní zástupce Alza.cz.</li>
+                        <li class="body-1">Partner není oprávněn zneužívat provizního systému pomocí nástrojů jako backclick, clickbot a obdobných nástrojů se stejným účinkem zvláště pak za účelem umělého navýšení provize vlastní či jiné osoby.</li>
+                        <li class="body-1">Partner nesmí narušit ochranu provizního systému a tzv. hacknout či crecknout zvláště pak za účelem umělého navýšení provize vlastní či jiné osoby. Poruší-li Partner povinnosti stanovené v článku 3 těchto VOP, Alza.cz má nárok na smluvní pokutu ve výši 50.000,- Kč (slovy: padesát tisíc korun českých) za každé takové porušení, přičemž Partner je povinen uhradit tuto smluvní pokutu do deseti (10) dnů od výzvy Alza.cz k její úhradě, přičemž nárok Alza.cz na náhradu škody v plné výši tím není dotčen.</li>
+                        <li class="body-1">Bude-li zjištěno porušení povinnosti Partnera vyplývajících z článku 3 těchto VOP, pak jej Alza.cz vyzve k okamžité nápravě. Nebude-li náprava učiněna ani do dvou (2) dnů, je Alza.cz oprávněna od smlouvy odstoupit.</li>
+                    </ol>
+
+                    <h4 class="headline-4">4. KALKULACE PROVIZE A FAKTURAČNÍ PODMÍNKY</h4>
+                    <ol>
+                        <li class="body-1">V případě splnění všech podmínek Programu včetně pravdivosti, úplnosti a správnosti prohlášení Partnera týkající se Programu a dodržování povinností v článku 3 těchto VOP, má Partner nárok na provizi, která je kalkulována z celkového obratu v příslušném kalendářním měsíci, kterého dosáhla Alza.cz v důsledku realizovaných a nezrušených transakcí provedených návštěvníky Portálu, kteří transakci na Alza.cz provedli poté, co se na internetový obchod provozovaný společností Alza.cz dostali po aktivním prokliku na odkaz či banner (dále jen „Návštěvník“), přičemž provize (dále jen „Provize“) je závislá od ceny zakoupeného zboží zákazníkem a typu daného zboží. Výše Provize naleznete <a href="#">zde</a>.</li>
+                        <li class="body-1">V případě, že Provize přesáhne výši 500,- Kč či ekvivalent v jiné měně, může Partner požádat o bezhotovostní úhradu na svůj bankovní účet oznámený Alza.cz, přičemž Alza.cz je povinna do třiceti (30) kalendářních dnů od dodání příslušného daňového dokladu (faktury) Partnera a prověření splnění podmínek pro výplatu Provize tuto Provizi převést bezhotovostním bankovním převodem na bankovní účet Partnera. Daňový doklad (faktura) musí splňovat zákonné náležitosti, v opačném případě je Alza.cz oprávněna Partnerovi vrátit daňový doklad (fakturu). V takovém případě se splatnost staví a počne běžet nová až dnem doručení opraveného daňového dokladu (faktury). V případě, že je Partner plátcem DPH, navyšuje se sjednaná Provize o zákonem stanovenou DPH a Alza v takovém případě hradí Partnerovi odměnu pouze na bankovní účet Partnera, který je zveřejněný u správce daně, přičemž tento bankovní účet musí být uveden na daňovém dokladu (faktuře) vystaveném Partnerem (v opačném případě je Alza.cz oprávněna Partnerovi daňový doklad vrátit).</li>
+                        <li class="body-1">Partner je povinen zaslat fakturu za každý kalendářní rok nejpozději do 15. ledna v roce následujícím po kalendářním roce, za nějž vznikl Partnerovi nárok na Provizi. V případě, že tak Partner neučiní, a zároveň tak neučiní ani do 7 dnů po vyzvání ze strany Alza.cz, tak nárok na Provizi za příslušný rok zaniká.</li>
+                        <li class="body-1">Promlčecí doba na uplatnění nároku na Provizi je jeden rok ode dne, kdy nárok mohl být uplatněn poprvé.</li>
+                        <li class="body-1">Má-li Alza.cz důvodné podezření, že Partner porušil tuto smlouvu či jinak zneužil podmínky provizního systému, je oprávněna platbu Provize pozdržet do té doby, nežli toto podezření bude vyvráceno.</li>
+                        <li class="body-1">Peněžitá částka se považuje za zaplacenou okamžikem jejího odepsání z bankovního účtu odesílatele ve prospěch bankovního účtu příjemce.</li>
+                    </ol>
+
+                    <h4 class="headline-4">5. UKONČENÍ SMLOUVY</h4>
+                    <ol>
+                        <li class="body-1">Smlouva může být ukončena odstoupením, dohodou nebo výpovědí.</li>
+                        <li class="body-1">Každá smluvní strana je oprávněna odstoupit od této smlouvy pouze z důvodů stanovených v těchto VOP.</li>
+                        <li class="body-1">Alza.cz je oprávněna odstoupit od smlouvy v případě, že:
+                            <ol>
+                                <li class="body-1">Partner porušuje podstatným způsobem povinnosti stanovené Partnerovi v těchto VOP a příslušných obecně závazných právních předpisech;</li>
+                                <li class="body-1">se jakékoliv prohlášení Partnera uvedené v článku 2 těchto VOP se ukáže jako nepravdivé, neúplné či nesprávné;</li>
+                                <li class="body-1">Dodavatel je v úpadku, hrozícím úpadku nebo byl proti němu podán návrh na výkon rozhodnutí.</li>
+                            </ol>
+                        </li>
+                        <li class="body-1">Partner je oprávněn od smlouvy odstoupit v případě, že Alza.cz je v prodlení s finančním plněním ve prospěch Partnera po dobu delší než dvacet (20) dní a nezjedná nápravu ani do deseti (10) dnů ode dne doručení písemného oznámení Partnera o takovém prodlení.</li>
+                        <li class="body-1">Účinky odstoupení od smlouvy nastávají dnem doručení písemného oznámení o odstoupení druhé smluvní straně.</li>
+                        <li class="body-1">Alza.cz je oprávněna vypovědět smlouvu i bez udání důvodu výpovědí s výpovědní dobou 7 dnů od doručení výpovědi.</li>
+                        <li class="body-1">Partner je oprávněn vypovědět smlouvu i bez udání důvodu výpovědi ve dvou (2) měsíční výpovědní době, přičemž smluvní strany se dohodly, že výpovědní doba začne plynout první den v kalendářním měsíci následujícím po doručení výpovědi druhé straně.</li>
+                        <li class="body-1">Smluvní strany se dohodly, že ukončením účinnosti smlouvy nejsou a nesmějí být dotčena ustanovení smlouvy týkající se licencí, záruk, nároků z odpovědnosti za vady, za škodu a nároky ze smluvních pokut, pokud vznikly před ukončením účinnosti smlouvy, ani další ustanovení a nároky, z jejichž povahy vyplývá, že mají trvat i po zániku účinnosti smlouvy.</li>
+                    </ol>
+
+                    <h4 class="headline-4">6. DŮVĚRNOST INFORMACÍ A PŘEDÁNÍ OSOBNÍCH ÚDAJŮ</h4>
+                    <ol>
+                        <li class="body-1">Smluvní strany se zavazují, že žádná z nich nezpřístupní - mimo případů výslovně uvedených v těchto VOP - třetí osobě důvěrné informace, které při plnění smlouvy získala od druhé smluvní strany, přičemž smluvní strany považují za důvěrnou informaci jakoukoliv informaci, která je takto označena, která má určitou hodnotu pro příslušnou stranu, je nebo by mohlo být obchodním tajemstvím a/nebo jejichž zveřejnění by ohrozilo nebo mohlo ohrozit oprávněné zájmy příslušné smluvní strany, a proto se zavazují pro ochranu důvěrných informací, které zůstávají vždy výhradním vlastnictvím předávající strany, vyvinout pro zachování jejich důvěrnosti a ochrany stejné úsilí, jako by se jednalo o jejich vlastní důvěrné informace, a to v souladu s principem nejlepší praxe, příslušnými právními předpisy a zejména nikoliv však výlučně zákonem č. 101/2000 Sb., o ochraně osobních údajů, v platném a účinném znění. Smluvní strany se dále zavazují nepoužít důvěrné informace druhé strany jinak, než za účelem plnění smlouvy.</li>
+                        <li class="body-1">Bez ohledu na výše uvedená ustanovení se za důvěrné nepovažují informace, které:
+                            <ol>
+                                <li class="body-1">se staly veřejně známými, aniž by jejich zveřejněním došlo k porušení závazků přijímající smluvní strany či právních předpisů;</li>
+                                <li class="body-1">měla přijímající strana oprávněně k dispozici před uzavřením smlouvy, pokud takové informace nebyly předmětem jiné, dříve mezi smluvními stranami uzavřené dohodě o ochraně informací;</li>
+                                <li class="body-1">jsou výsledkem postupu, při kterém k nim přijímající strana dospěje nezávisle a je to schopna doložit svými záznamy nebo důvěrnými informacemi třetí strany;</li>
+                                <li class="body-1">po podpisu smlouvy poskytne přijímající straně třetí osoba, jež není omezena v takovém nakládání s informacemi.</li>
+                            </ol>
+                        </li>
+                        <li class="body-1">Smluvní strany se zavazují v plném rozsahu zachovávat povinnost mlčenlivosti a povinnost chránit důvěrné informace vyplývající ze smlouvy a též z příslušných obecně závazných právních předpisů, zejména povinnosti vyplývající z GDPR, ve znění pozdějších předpisů. Smluvní strany se v této souvislosti zavazují poučit veškeré osoby, které se na jejich straně budou podílet na plnění této smlouvy ve smyslu těchto VOP, o výše uvedených povinnostech mlčenlivosti a ochrany důvěrných informací a dále se zavazují vhodným způsobem zajistit dodržování těchto povinností všemi osobami podílejícími se na plnění této smlouvy, a to zajištěním vhodných technických a organizačních opatření s přihlédnutím ke stavu techniky, nákladům na provedení, povaze, rozsahu, kontextu a účelům zpracování i k různě pravděpodobným a různě závažným rizikům pro práva a svobody fyzických osob.</li>
+                        <li class="body-1">Alza.cz informuje Partnera, že v případě porušování těchto VOP Partnerem, zejména v případě porušení bodu 2.1.9. a/nebo bodu 3.5. těchto VOP, nebo v případě jiného protiprávního jednání páchaného vůči Alza.cz, mohou být osobní údaje Partnera sdíleny se třetími subjekty v podobném postavení jako je Alza.cz (např. další podnikatelé, kteří provozují svoji podnikatelskou činnost v oblasti e-commerce). Osobní údaje budou sdíleny pouze v nutném rozsahu, přičemž účelem předání osobních údajů je prevence dalšího protiprávního jednání.</li>
+                        <li class="body-1">Smluvní strany se dohodly, že ukončení účinnosti smlouvy se nedotkne ustanovení tohoto článku VOP a jejich účinnost přetrvá i po ukončení účinnosti smlouvy.</li>
+                        <li class="body-1">Není-li v těchto VOP stanoveno jinak, použijí se ve vztahu k ochraně osobních údajů Podmínky ochrany osobních údajů, které jsou dostupné zde: <a href="/privacy-policy" class="body-1--link">https://www.alza.cz/privacy-policy</a></li>
+                    </ol>
+
+                    <h4 class="headline-4">7. OCHRANNÉ ZNÁMKY A DOBRÁ POVĚST</h4>
+                    <ol>
+                        <li class="body-1">Smluvní strany se zavazují postupovat tak, aby žádná z nich neporušovala ochranné známky a dobrou pověst druhé smluvní strany.</li>
+                        <li class="body-1">Smluvní strany se dohodly, že veškeré ochranné známky a obchodní jméno druhé smluvní strany mohou použít pouze na základě samostatného výslovného písemného předchozího souhlasu druhé strany. Pro tyto účely zašle požadující smluvní strana oprávněné smluvní straně náhled reklamního sdělení, oznámení nebo předmět použití ochranné známky a/nebo obchodního jména nejméně dva (2) pracovní dny před plánovaným zveřejněním, přičemž teprve po písemném odsouhlasení oprávněné smluvní strany je požadující smluvní strana takové zveřejnění učinit.</li>
+                    </ol>
+
+                    <h4 class="headline-4">8. ODPOVĚDNOST ZA ŠKODU</h4>
+                    <ol>
+                        <li class="body-1">Každá smluvní strana nese odpovědnost za způsobenou škodu v rámci platných a účinných právních předpisů a smlouvy. Smluvní strany se zavazují k vyvinutí maximálního úsilí k předcházení škodám a k minimalizaci případných i vzniklých škod.</li>
+                        <li class="body-1">Žádná ze smluvních stran není odpovědná za škodu a není ani v prodlení, pokud k tomuto došlo v důsledku prodlení s plněním závazků druhé smluvní strany nebo v důsledku okolností vylučujících odpovědnost ve smyslu ust. § 2913 odst. 2 občanského zákoníku, avšak odpovědnost nevylučuje překážka, pokud vznikla teprve v době, kdy povinná strana byla v prodlení s plněním své povinnosti, nebo vznikla z jejích hospodářských poměrů, přičemž účinky vylučující odpovědnost jsou omezeny pouze na dobu, dokud trvá překážka, s níž jsou tyto účinky spojeny.</li>
+                        <li class="body-1">Smluvní strany se zavazují upozornit druhou smluvní stranu bez zbytečného odkladu na vzniklé okolnosti vylučující odpovědnost bránící řádnému plnění smlouvy a zároveň se zavazují k vyvinutí maximálního úsilí k odvrácení a překonání okolností vylučujících odpovědnost.</li>
+                    </ol>
+
+                    <h4 class="headline-4">9. VZÁJEMNÁ KOMUNIKACE</h4>
+                    <ol>
+                        <li class="body-1">Smluvní strany se zavazují vzájemně spolupracovat a poskytovat si veškeré informace potřebné pro řádné plnění svých závazků, zejména nikoliv však výlučně jsou povinny informovat druhou smluvní stranu o veškerých skutečnostech, které jsou nebo mohou být důležité pro řádné plnění smlouvy.</li>
+                        <li class="body-1">V případě, že Partner bude mít jakékoliv dotazy či připomínky k programu, může tyto směřovat na <a href="/Kontakt?g=6&q=105" class="body-1--link">https://www.alza.cz/Kontakt?g=6&q=105</a>.</li>
+                        <li class="body-1">Smluvní strany se zavazují, že v případě změny své poštovní adresy, faxového čísla nebo e-mailové adresy nebo jakýchkoliv jiných identifikačních údajů a dalších rozhodných skutečností týkající se Programu (mj. plátcovství DPH) budou o této změně druhou smluvní stranu informovat nejpozději do tří (3) pracovních dnů.</li>
+                        <li class="body-1">Partner se zavazuje, že v případě svého úpadku, hrozícího úpadku, podání insolvenčního návrhu na Partnera nebo návrhu na výkon rozhodnutí proti Partnerovi bude informovat společnost Alza.cz o takové skutečnosti bez zbytečného odkladu, nejpozději však do tří (3) pracovních dnů. Nesplní-li Partner uvedenou povinnost, považuje se takové jednání za podstatné porušení smlouvy.</li>
+                    </ol>
+
+                    <h4 class="headline-4">10. ZÁVĚREČNÁ USTANOVENÍ</h4>
+                    <ol>
+                        <li class="body-1">Smluvní strany se zavazují všechny spory vznikající ze smlouvy a v souvislosti s ní řešit přednostně smírnou cestou. Smluvní strany se dohodly, že pokud tyto spory nebudou vyřešeny do šedesáti (60) kalendářních dnů od začátku jednání o smíru, budou tyto spory rozhodovány s konečnou platností u příslušného soudu České republiky.</li>
+                        <li class="body-1">Smluvní strany se dohodly, že Partner není oprávněn postoupit peněžité nároky vůči Alza.cz na třetí osobu bez předchozího písemného souhlasu Alza.cz.</li>
+                        <li class="body-1">Smluvní strany se dohodly, že Alza.cz je oprávněna jednostranně změnit VOP. V případě, že Partner do deseti (10) pracovních dnů od okamžiku, kdy ho Alza.cz o změně informovala prostřednictvím emailové komunikace, Alza.cz neoznámí svůj nesouhlas s novým zněním VOP a z tohoto důvodu neodstoupí od smlouvy, tyto VOP se stanou účinnými pro další transakce smluvních stran.</li>
+                        <li class="body-1">Nicméně Partner nepostoupí ani nepřevede jakékoliv své závazky plynoucí ze smlouvy bez předchozího písemného souhlasu Alza.cz.</li>
+                        <li class="body-1">Práva a povinnosti smluvních stran touto smlouvou výslovně neupravené se řídí zákonem č. 89/2012 Sb., občanský zákoník v platném znění, a příslušnými všeobecně závaznými právními předpisy České republiky.</li>
+                        <li class="body-1">Tyto VOP včetně jejich součástí jsou platné a účinné od 10. 11. 2019 a ruší předchozí znění VOP včetně jejích součástí, přičemž jsou k dispozici v sídle a provozovnách Alzy nebo elektronicky na <a href="https://www.alza.cz" class="body-1--link">www.alza.cz</a>.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

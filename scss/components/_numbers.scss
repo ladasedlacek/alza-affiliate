@@ -1,0 +1,27 @@
+.numbers{
+    margin: rem(50px) auto 0;
+
+    .number{
+        width: calc(33.33333% - rem(20px));
+    }
+}
+
+@media (max-width: $breakpoint-md) {
+    #landingpage .numbers{
+        gap: rem(30px) rem(10px);
+        
+        .number{
+            width: calc(50% - rem(20px));
+        }
+    }
+}
+
+@media (max-width: $breakpoint-sm) {
+    #landingpage .numbers{
+        gap: rem(30px) rem(10px);
+
+        .number{
+            width: 100%;
+        }
+    }
+}

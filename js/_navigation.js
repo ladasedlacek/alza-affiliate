@@ -45,9 +45,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // closing mobile navigation after user clicked on the link in navigation
     const run_close = () => {
         const menu_button = document.querySelector('.menu-button')
-
+        const navigation_itemsWrapper = document.querySelector('.navigation__itemsWrapper')
+        const links = document.querySelectorAll('.navigation__itemsWrapper a') 
+    
         const handleClick = () => {
             if (window.innerWidth <= 1200) {
+                menu_button.checked = false
+            }
+        }
+    
+        const handleOutsideClick = (event) => {
+            if (window.innerWidth <= 1200 && !navigation_itemsWrapper.contains(event.target) && !menu_button.contains(event.target)) {
                 menu_button.checked = false
             }
         }
@@ -55,8 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
         links.forEach(link => {
             link.addEventListener('click', handleClick)
         })
+    
+        document.addEventListener('click', handleOutsideClick)
     }
-
+    
     run_scroll()
     run_close()
 })

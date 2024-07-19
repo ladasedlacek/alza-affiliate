@@ -1,0 +1,44 @@
+.footer{
+    &__socialWrapper{
+        gap: rem(12px);
+        justify-content: flex-start;
+        margin-top: rem(10px);
+    }
+
+    &__socialButton{
+        width: rem(42px);
+        height: rem(42px);
+        border-radius: rem(100px);
+        background: color(page, neutral-0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 1px 4px rgba($color: #000000, $alpha: .15);
+        transition: .3s ease-in-out;
+
+        &:hover{
+            transform: scale(1.1);
+
+            .icon{
+                &--youtube{
+                    fill: #FF0000;
+                }
+
+                &--facebook{
+                    fill: #0866ff;
+                }
+                &--instagram{
+                    fill: #ff0069;
+                }
+                &--x{
+                    fill: color(page, neutral-9);
+                }
+            }
+        }
+
+        svg{
+            fill: color(page, neutral-6);
+            transition: .25s ease-in-out;
+        }
+    }
+}

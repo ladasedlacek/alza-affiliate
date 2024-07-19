@@ -19,21 +19,114 @@
     }
 
     &__box{
-        width: calc(100% / 3 - 14px);
+        width: calc(100% / 3 - 16px);
         text-align: left;
 
         .perex{
             color: color(page, neutral-8);
-        }
-        
-        .perex{
             margin-bottom: rem(20px);
+        }
+    }
+
+    &--reviews{
+        .perex{
+            margin-bottom: 0;
+        }
+    }
+
+    &__box{
+        &--reviews{
+            border: 1px solid color(page, neutral-3);
+            padding-right: rem(20px) rem(10px);
+            gap: 20px;
+            justify-content: space-between;
+        }
+    }
+
+    &__company{
+        width: calc(45% - rem(15px));
+        text-align: center;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            right: rem(-10px);
+            background: color(page, neutral-9);
+            opacity: .2;
+        }
+
+        .body-1{
+            font-weight: 700;
+        }
+
+        .body-2{
+            margin-top: rem(4px);
+        }
+
+        .icon--rating{
+            margin: rem(4px) auto 0;
+        }
+    }
+
+    &__review{
+        width: calc(55% - rem(15px));
+        text-align: center;
+    }
+
+    &__partner{
+        justify-content: flex-start;
+
+        .perex{
+            font-weight: 700;
         }
     }
 }
 
-@media (max-width: $breakpoint-sm) {
-    .boxes{
+@media (max-width: $breakpoint-lg) {
+    #landingpage .boxes{
+        &__company,
+        &__review{
+            width: 100%;
+        }
+
+        &__company::after{
+            width: 40%;
+            height: 1px;
+            right: auto;
+            left: 50%;
+            top: auto;
+            bottom: rem(-15px);
+            transform: translate(-50%, 0);
+        }
+
+        &__partner{
+            gap: rem(20px);
+            flex-direction: column;
+            text-align: center;
+
+            .button{
+                max-width: rem(230px);
+                margin: rem(10px) auto 0;
+            }
+        }
+
+        .boxes__box--reviews{
+            padding: rem(16px);
+            gap: 30px;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-md) {
+    #landingpage .boxes{
         &--white{
             .boxes__box{
                 padding: rem(20px);
@@ -41,13 +134,13 @@
         }
 
         &__box{
-            width: calc(100% / 2 - rem(5px));
+            width: calc(100% / 2 - rem(10px));
         }
     }
 }
 
 @media (max-width: $breakpoint-xs) {
-    .boxes{
+    #landingpage .boxes{
         &__box{
             width: 100%;
         }
