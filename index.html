@@ -399,6 +399,81 @@
                     </div>
                 </div>
             </section>
+
+            <!-- contact -->
+             <section class="contact">
+                <div class="wrapper">
+                    <h2 class="headline-2 mb50">Máte dotaz? Napište nám</h2>
+                    <form action="#" method="POST" class="form">
+                        <div class="form__group form__row flex">
+                            <div class="form__field flex">
+                                <label class="body-2" for="first-name">Jméno: <span class="required">*</span></label>
+                                <input type="text" id="first-name" name="first-name" required>
+                            </div>
+
+                            <div class="form__field flex">
+                                <label class="body-2" for="last-name">Příjmení: <span class="required">*</span></label>
+                                <input type="text" id="last-name" name="last-name" required>
+                            </div>
+                        </div>
+
+                        <div class="form__group form__row flex">
+                            <div class="form__field flex">
+                                <label class="body-2" for="email">E-mailová adresa: <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form__field form__field--phone flex">
+                                <label class="body-2" for="phone">Telefon: <span class="required">*</span></label>
+                                <div class="form__phone flex">
+                                    <div class="form__phoneCode">
+                                        <div class="form__codeWrapper flex">
+                                            <img src="build/img/flags/czech.svg" alt="Czech Flag" class="flag">
+                                            <span class="form__code">+420</span>
+                                        </div>
+                                        <div class="form__dropdown">
+                                            <div class="form__dropdown-item" data-code="+420" data-flag="czech.svg">
+                                                <img src="build/img/flags/czech.svg" alt="Czech Flag" class="flag">+420
+                                            </div>
+                                            <div class="form__dropdown-item" data-code="+421" data-flag="slovakia.svg">
+                                                <img src="build/img/flags/slovakia.svg" alt="Slovak Flag" class="flag">+421
+                                            </div>
+                                            <div class="form__dropdown-item" data-code="+36" data-flag="hungary.svg">
+                                                <img src="build/img/flags/hungary.svg" alt="Hungarian Flag" class="flag">+36
+                                            </div>
+                                            <div class="form__dropdown-item" data-code="+49" data-flag="germany.svg">
+                                                <img src="build/img/flags/germany.svg" alt="German Flag" class="flag">+49
+                                            </div>
+                                            <div class="form__dropdown-item" data-code="+43" data-flag="austria.svg">
+                                                <img src="build/img/flags/austria.svg" alt="Austrian Flag" class="flag">+43
+                                            </div>
+                                            <div class="form__dropdown-item" data-code="+44" data-flag="uk.svg">
+                                                <img src="build/img/flags/uk.svg" alt="UK Flag" class="flag">+44
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form__group">
+                            <div class="form__field flex">
+                                <label class="body-2" for="website">Webová stránka: <span class="required">*</span></label>
+                                <input type="url" id="website" name="website" required>
+                            </div>
+                        </div>
+
+                        <div class="form__group form__group--textarea">
+                            <div class="form__field flex">
+                                <label class="body-2" for="message">Zpráva: <span class="required">*</span></label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                        </div>
+                        <button class="button button--form"><p class="button__text">Odeslat zprávu</p></button>
+                    </form>
+                </div>
+             </section>
         </div>
 
         <!-- footer -->

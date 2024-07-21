@@ -23,6 +23,18 @@
         }
     }
 
+    &--form{
+        background-color: color(page, green);
+
+        &:hover{
+            background: darken($color: color(page, green), $amount: 6%);
+        }
+
+        .button__text{
+            padding-left: 0;
+        }
+    }
+
     &--register{
         .button__text{
             &::before{

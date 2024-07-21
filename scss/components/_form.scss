@@ -1,0 +1,169 @@
+#landingpage{
+    .form{
+        max-width: rem(694px);
+        width: 100%;
+        margin: 0 auto;
+
+        &__group {       
+            gap: rem(20px);   
+            margin-bottom: rem(20px);
+
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+
+            label{
+                text-align: left;
+
+                span{
+                    color: color(page, red);
+                }
+            }
+
+            input, textarea{
+                padding: rem(8px);
+                margin: 0;
+                border: 1px solid #ccc;
+                border-radius: rem(4px);
+                width: 100%;
+                flex: 1;
+            }
+
+            &--textarea{
+                flex-direction: column;
+                gap: rem(4px);
+
+                .form__field{
+                    width: 100%;
+
+                    textarea{
+                        resize: none;
+                        overflow-y: auto;
+                        min-height: rem(158px);
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        &__field{
+            width: calc(50% - rem(10px));
+            gap: rem(4px);
+            flex-direction: column;
+            justify-content: flex-start;
+
+            &--phone{
+                .form__phoneCode{
+                    flex: 4;
+                }
+
+                input{
+                    flex: 8;
+                }
+            }
+        }
+
+        &__phone{
+            align-items: center;
+        }
+
+        .button{
+            margin-top: rem(20px);
+        }
+
+        &__phoneCode {
+            position: relative;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: rem(8px);
+            margin: 0;
+            border: 1px solid #ccc;
+            border-radius: rem(4px);
+            height: 100%;
+            position: relative;
+
+            &::after{
+                content: '';
+                position: absolute;
+                background: url('data:image/svg+xml,<svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.306062 0.307896C0.208976 0.404613 0.131941 0.519548 0.0793774 0.646106C0.0268138 0.772665 -0.000244141 0.908356 -0.000244141 1.0454C-0.000244141 1.18244 0.0268138 1.31813 0.0793774 1.44469C0.131941 1.57124 0.208976 1.68618 0.306062 1.7829L7.23106 8.7079C7.30816 8.78515 7.39973 8.84644 7.50054 8.88826C7.60135 8.93007 7.70942 8.9516 7.81856 8.9516C7.9277 8.9516 8.03577 8.93007 8.13658 8.88826C8.23739 8.84644 8.32897 8.78515 8.40606 8.7079L15.3311 1.7799C15.5248 1.58391 15.6331 1.31922 15.6323 1.04365C15.6315 0.768074 15.5217 0.504016 15.3268 0.309156C15.1319 0.114295 14.8679 0.00447078 14.5923 0.00367266C14.3167 0.00287453 14.052 0.111168 13.8561 0.304896L7.81406 6.3379L1.77206 0.298896C1.57616 0.106264 1.31194 -0.000934627 1.0372 0.000752028C0.762467 0.00243868 0.499582 0.112874 0.306062 0.307896V0.307896Z" fill="%230094E7"/></svg>');
+                width: rem(16px);
+                height: rem(9px);
+                right: rem(8px);
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        
+            .flag {
+                width: rem(20px);
+                height: rem(14px);
+                margin-right: rem(4px);
+            }
+        }
+
+        &__codeWrapper{
+            justify-content: flex-start;
+            align-items: center;
+            gap: rem(4px);
+        }
+    
+        &__dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: color(page, neutral-0);
+            border: 1px solid color(page, neutral-3);
+            border-radius: rem(4px);
+            overflow: hidden;
+            z-index: 1000;
+            padding: rem(10px);
+            
+        }
+
+        &__dropdown-item {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            cursor: pointer;
+
+            &:hover {
+                background: #f0f0f0;
+            }
+
+            img {
+                width: 20px;
+                height: 14px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-sm) {
+    #landingpage .form{
+        &__phoneCode::after{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-xs) {
+    #landingpage .form{
+        &__group{
+            flex-direction: column;
+        }
+
+        &__field{
+            width: 100%;
+        }
+
+        &__phoneCode::after{
+            display: block;
+        }
+
+        .button{
+            margin: rem(20px) auto 0;
+        }
+    }
+}
