@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     open_lang()
 
-    const closeDialog = () => {
+    const close_dialog = () => {
         const dialogs = document.querySelectorAll('.dialog')
         dialogs.forEach(dialog => {
             const close = dialog.querySelector('.dialog__close')
@@ -40,5 +40,5 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         })
     }
-    closeDialog();
+    close_dialog()
 })
