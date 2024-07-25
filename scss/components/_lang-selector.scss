@@ -36,7 +36,7 @@
         &:hover{
             background: color(page, neutral-2);
 
-            .langSelector__checkBox{
+            .langDialog__checkBox{
                 border: 1px solid color(page, media);
             }
         }
@@ -44,7 +44,7 @@
         &--active{
             background: color(page, neutral-2);
 
-            .langSelector__checkBox{
+            .langDialog__checkBox{
                 border: 1px solid color(page, media);
 
                 &::before{

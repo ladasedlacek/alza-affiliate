@@ -57,9 +57,15 @@ footer{
         &--right{
             width: rem(862px);
             right: 0;
-            top: -60%;
+            top: 0;
             transform: translateX(50%);
             opacity: .7;
+        }
+
+        &--bottom{
+            top: auto;
+            bottom: 10%;
+            right: 20%;
         }
     }
 }

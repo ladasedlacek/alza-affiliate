@@ -1,5 +1,5 @@
 .navigation{
-    width: 100vw;
+    width: 100%;
     background-color: color(page, neutral-0);
     box-shadow: 0 2px 8px rgba($color: color(page, neutral-9), $alpha: .08);
     position: relative;
@@ -66,6 +66,21 @@
 
     &__user{
         gap: 10px;
+
+        .button{
+            display: block;
+            height: rem(40px);
+
+            &__text{
+                line-height: rem(40px);
+
+                &:before{
+                    width: rem(20px);
+                    height: rem(20px);
+                    background-size: cover;
+                }
+            }
+        }
     }
 }
 
