@@ -2,7 +2,8 @@
     width: 100%;
     background-color: color(page, neutral-0);
     box-shadow: 0 2px 8px rgba($color: color(page, neutral-9), $alpha: .08);
-    position: relative;
+    position: fixed;
+    top: 0;
     z-index: 999;
     padding: rem(30px) 0;
 
@@ -84,12 +85,12 @@
     }
 }
 
-.sticky{
+/* .sticky{
     position: fixed;
     top: 0;
     z-index: 100;
     background-color: white;
-}
+} */
 
 @media (max-width: $breakpoint-xl){
     .navigation{

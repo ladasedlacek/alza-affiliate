@@ -1,5 +1,5 @@
 .header{
-    padding-top: rem(80px);
+    padding-top: rem(180px);
     background-color: #F8FBFD;
     z-index: 2;
     overflow: hidden;
@@ -60,10 +60,14 @@
     }
 }
 
+@media (max-width: $breakpoint-lg) {
+    .header{
+        padding-top: rem(120px);
+    }
+}
+
 @media (max-width: $breakpoint-md) {
     .header{
-        padding-top: rem(50px);
-
         &__textWrapper{
             padding-top: 0;
         }
