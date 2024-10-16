@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll('.navigation__link')
+    const navigation_links = document.querySelectorAll('.navigation__link')
+    const footer_links = document.querySelectorAll('.footer .body-1--link')
     const navigation = document.querySelector('.navigation')
-    const header = document.querySelector('.header')
 
     // scrolling function
     const run_scroll = () => {
@@ -9,22 +9,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // scroll to element
         const scroll_to = event => {
-            event.preventDefault()
-            const get_href = event.currentTarget.getAttribute('href')
-            const target = document.querySelector(get_href)
+            event.preventDefault();
+            const get_href = event.currentTarget.getAttribute('href');
+            const target = document.querySelector(get_href);
     
             if (target) {
-                const position = target.getBoundingClientRect().top + window.pageYOffset
-                const offset_position = position - nav_height
+                let position = target.getBoundingClientRect().top + window.pageYOffset;
+                let offset_position = position - nav_height;
+                console.log('patička');
+                
+    
+                /* if (event.currentTarget.closest('.footer')) {
+                    console.log('patička');
+                    
+                    offset_position += nav_height;
+                } */
     
                 window.scrollTo({
                     top: offset_position,
                     behavior: 'smooth'
-                })
+                });
             }
-        }
+        };
 
-        links.forEach(link => {
+        navigation_links.forEach(link => {
+            link.addEventListener('click', scroll_to)
+        })
+
+        footer_links.forEach(link => {
             link.addEventListener('click', scroll_to)
         })
     }
@@ -48,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
         // link items click - close menu
-        links.forEach(link => {
+        navigation_links.forEach(link => {
             link.addEventListener('click', event => {
                 event.stopPropagation()
                 toggle()
